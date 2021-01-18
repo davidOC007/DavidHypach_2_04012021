@@ -1,7 +1,8 @@
 /* GENERAL */
 
 body{
-    font-family: Raleway, Sans-serif;    
+    font-family: Raleway, Sans-serif; 
+    margin:0;  
 }
 
 li{
@@ -11,6 +12,9 @@ li{
 a{
     color: black;
     text-decoration: none;
+}
+.prix{
+    font-weight: bold;
 }
 
 
@@ -42,9 +46,9 @@ a{
 
 #nav_hebergements, #nav_activites {
 	border-bottom : solid 3px #F2F2F2;
-	padding-bottom: 15px;
-	width:50%;
-	text-align: center;
+	padding-bottom: 15px;	
+    text-align: center;
+    width:50%;
 }
 
 
@@ -58,11 +62,13 @@ a{
 /* RECHERCHE */
 
 #recherche{
-    padding:0 20px 20px 20px;
+    padding:0 20px 0 20px;
 }
 
 #recherche h1{
     font-size: 22px;
+    font-weight: bolder;
+
 }
 
 #barre_de_recherche{
@@ -92,7 +98,9 @@ a{
 
 #text{
     width: 100%;
-	border: none;	
+    height: 90%;
+    border: none;
+    font-weight: bold;	
 }
 
 #submit{
@@ -100,7 +108,8 @@ a{
 	color: white;
     border: none;
     border-radius: 15px;
-	padding: 15px;
+    padding: 15px;
+    cursor:pointer;
 }
 #bouton{
     display:none;
@@ -113,11 +122,13 @@ a{
 }
 
 #filtres {
-	padding:20px;
+	margin:20px 20px 0 20px;
 }
 
 #filtres h2{
     padding:0;
+    font-size:18px;
+    font-weight: bold;
 }
 
 .option_filtres{
@@ -159,7 +170,7 @@ a{
 .info{
     display: flex;
     align-items: center;
-    margin: 10px 0 20px 0; 
+    margin: 10px 0 20px 20px; 
 }
 
 .icone_info{
@@ -194,7 +205,8 @@ a{
 h2{
     padding-left: 18px;
 }
-.carte_popu{    
+.carte_popu{
+    
     background:white;
     border-radius: 15px;
     box-shadow:  3px 3px 12px #e9e7e9;
@@ -202,7 +214,6 @@ h2{
     margin-left:18px;
     margin-bottom: 10px;    
 }
-
 .img_popu{
     width:40%;
     height:140px;
@@ -211,12 +222,13 @@ h2{
     border-radius:15px 0 0 15px;
     margin-right: 15px;
 }
-.sidename{
+.description{
     display: flex;   
 }
 
 .legende_popu h3{
     margin-top:15px;
+    font-weight: 800;
 }
 
 .legende_popu p{
@@ -257,9 +269,9 @@ h2{
     box-shadow:  3px 3px 12px #e9e7e9;
     width: 90%;
     margin-bottom: 10px;
-    margin-left:18px;    
+    margin-left:18px;
+    
 }
-
 .img_hebergements{
     width:97%;
     height:120px;
@@ -282,6 +294,7 @@ h3{
     margin-top:2px;
     margin-bottom:2px;
     font-size: 16px;
+    font-weight: 800;
 }
 
 .legende_hebergements p{
@@ -295,8 +308,9 @@ h3{
     letter-spacing: -2px;
 }
 
-.suite{
+.afficher_plus{
     padding: 20px 0 20px 22px;
+    font-size: 20px;
     font-weight : bold;        
 }
 
@@ -324,7 +338,9 @@ h3{
 }
 
 .legende h3{
-    padding: 10px 0 20px 20px;
+    padding-bottom:23px;
+    padding-left:22px;
+    padding-top:10px;
 }
 
 /* FOOTER */
@@ -344,7 +360,15 @@ footer ul{
     padding-left:0;
 }
 
+/* PETITES RESOLUTIONS */
 
+@media screen and (max-width:374px)
+
+{
+    .ecoflex{
+        display: block;    
+    }
+}
 /* AFFICHAGE TABLETTE */
 
 
@@ -362,26 +386,12 @@ footer ul{
 }
 
 
-@media screen and (min-width: 550px)           
+
+/* Affichage en ligne du header et du footer + remplacement de la loupe par le bouton */
+
+@media screen and (min-width: 650px) 
 
 {
-    footer{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;        
-    } 
-
-}
-
-
-
-/*Affichage desktop */
-
-@media screen and (min-width: 992px)
-
-{
-    
-   /*HEADER*/
 
     header {
         display: flex;
@@ -417,9 +427,7 @@ footer ul{
         color:#0065FC;
     }
     
-    
-
-/* RECHERCHE */
+    /* RECHERCHE */
 
     #bouton{
         display:block;
@@ -431,115 +439,178 @@ footer ul{
         border-radius: 0 15px 15px 0;
     } 
 
-    #flexdesk{
-        display: flex;        
-    }
-
- /*Filtres*/
-
-    #filtres{
+    #hebergements_maincontainer{
         display: flex;
     }
-
-    #filtres h2{
-        margin:10px 30px 0 0;
-        
-    }
-
-    #selection_filtres{
-       display: flex;
-       flex-direction: row;
-    }
-
-   .option_filtres{
-    margin-right: 20px;
-   }
     
-  /* POPULAIRES */
-
-
-    #populaires{
-        order:2;
-        flex:1;     
-    }
-
-    #populaires h2{
-        margin-bottom: 30px;
-    }
-
-    .carte_popu{
-        margin-bottom: 30px;
-    }
-
-  /* HEBERGEMENTS */
-
-    #flexhebergements{
+    #maincontainer{
         display: flex;
-        flex-wrap: wrap;
+    }
+    footer{
+        display: flex;
+        justify-content: flex-start;      
+    }
+    .mentions{
+        margin:0 auto;     
     }
 
-    .carte_hebergements{
-        width:30%;
-        margin-left:20px;
-        margin-bottom: 30px;        
-    }
+}
 
-    #hebergements{
-        margin-right: 50px;
-        background-color:#F2F2F2;
-        order:1;
-        flex:2;
-    }
+/* Affichage filtres en ligne */
 
+@media screen and (min-width:925px)
+
+{
+
+/*Filtres*/
+
+#filtres{
+    display: flex;
+}
+
+#filtres h2{
+    margin:10px 30px 0 8px;
+    
+}
+
+#selection_filtres{
+   display: flex;
+   flex-direction: row;
+}
+
+.option_filtres{
+margin-right: 20px;
+}
+
+
+}
+    
+
+@media screen and (min-width:1024px)
+
+{
+  
+   
+/* RECHERCHE */
+
+#bouton{
+    display:block;
+} 
+#loupe{
+    display:none;
+} 
+#submit{
+    border-radius: 0 15px 15px 0;
+} 
+
+#flexdesk{
+    display: flex;         
+}
+
+
+
+/* POPULAIRES */
+
+#populaires{
+    order:2;
+    flex:1;  
+    border-radius: 15px;
+    margin-right:12px; 
+    padding-left: 10px; 
+    padding-right: 10px;
+}
+
+
+#populaires h2{
+    margin-bottom: 30px;
+}
+
+.carte_popu{
+    margin-bottom: 30px;
+}
+
+
+/* HEBERGEMENTS */
+
+#hebergements_container1, #hebergements_container2{
+    display: flex;
+}
+
+#hebergements_maincontainer{
+    display: block;
+}
+
+#hebergements{
+    order:1;
+    flex:2;  
+    margin-right: 30px;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 30px;
+    background-color: #F2F2F2; 
+    border-radius: 15px;
+}
+
+#hebergements_container1{
+    margin-bottom: 20px;
+}
 
 
 /* ACTIVITES */
 
 
-    #maincontainer{
-        display: flex;
-    }
+#maincontainer{
+    display: flex;
+}
 
-    #container1, #container2{
-        display: flex;   
-    }
+#container1, #container2{
+    display: flex;   
+}
 
-    .flex1 img{
-        height:400px;
-    }
+.flex1 img{
+    height:390px;
+}
 
-    .flex2 img{
-        height:400px;
-    }
+.flex2 img{
+    height:390px;
+}
 
-    .souscontainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+.souscontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    #container1 .flex1{
-        height:450px;
-    }
+#container1 .flex1{
+    height:450px;
+}
 
-    #container2 .flex2{
-        height:450px;
-    }
+#container2 .flex2{
+    height:450px;
+}
+
+.container1 .carte_activites{
+    margin-bottom: 0;
+}
+.souscontainer .carte_activites{
+    margin-bottom: 8;
+}
 
 
 
-/* FOOTER */
+/* FOOTER    alignement à gauche des mentions  */
 
-    footer{
-	    display: flex;
-	    flex-wrap: wrap;
-	    justify-content: space-between;	
-    } 
+    .mentions{
+        margin-left:0;
 
-    .assistance{
-        margin-right: 250px;
     }
 
    
 
 }
+
+
+
+
+
+
