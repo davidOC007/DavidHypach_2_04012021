@@ -35,7 +35,7 @@ h3{
 /*HEADER*/
 
 .logo {
-    margin: 25px 20px 10px 20px;
+    margin: 25px 20px 10px 25px;
 }
 
 .inscription {
@@ -125,6 +125,7 @@ h3{
     padding: 15px;
     cursor:pointer;
 }
+
 .bouton{
     display:none;
 }
@@ -234,6 +235,7 @@ h3{
     margin-bottom: 5%;
     width: 100%;
 }
+
 .carte_populaires a{
     display: flex;
     background-color: white;
@@ -242,6 +244,7 @@ h3{
     box-shadow:  3px 3px 12px #e9e7e9;
     
 }
+
 .carte_populaires img{
     width: 120px;
     min-width: 120px;
@@ -250,6 +253,7 @@ h3{
     object-fit: cover;
     border-radius: 15px 0 0 15px;
 }
+
 .legende_populaires{
     margin-left: 20px;
     margin-right: 20px;
@@ -257,10 +261,12 @@ h3{
     flex-direction: column;
     justify-content: space-between;
 }
+
 .legende_populaires h3,.legende_populaires p{
     margin: 0px;
     margin-top: 4px;
 }
+
 .legende_populaires span{
     margin-bottom: 6px;
 }
@@ -318,24 +324,27 @@ h3{
 #activites{
     margin: 0 28px 30px 28px;
 }
+
 #activites h2{
     margin-bottom: 22px;
     font-size: 23px;
 }
-.carte_activité{
+
+.carte_activites{
     width: 100%;
     margin-bottom: 22px;
     border-radius: 15px; 
     box-shadow:  3px 3px 12px #e9e7e9;
 }
 
-.carte_activité img{
+.carte_activites img{
     width: 100%;
     height: 100px; 
     border-radius: 15px 15px 0 0;
     object-fit: cover;
 }
-.carte_activité h3{ 
+
+.carte_activites h3{ 
     font-weight: bold;
     margin: 0 5px 5px 5px;
     padding: 10px;
@@ -396,6 +405,7 @@ footer ul{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        padding-right:30px;
         
     } 
 
@@ -464,6 +474,7 @@ footer ul{
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
     .carte_populaires{
         padding-bottom: 30px;
         margin-bottom: 0;
@@ -492,16 +503,14 @@ footer ul{
         height: 80px;
     }
 
-    
-    
-    
+       
 }
 
 /* Affichage filtres en ligne */
 
-@media screen and (min-width:925px)
+@media screen and (min-width:925px){
 
-{
+
 
 /*Filtres*/
 
@@ -510,7 +519,7 @@ footer ul{
     }
 
     .filtres h2{
-        margin:10px 30px 0 8px;    
+        margin:10px 30px 0 0;    
     }
 
     .selection_filtres{
@@ -522,20 +531,31 @@ footer ul{
         margin-right: 20px;
     }
 
-
+    
 }
 
 @media (min-width: 1024px){
 
     .logo{
-        margin-left:60px;
+        margin-left:30px;
     }
 
     main{
         margin: 0 30px;
     }
 
-    
+    .recherche{
+        margin-left:0px;
+    }
+
+    .filtres{
+        margin-left:0;
+    }
+
+    .info{
+        margin-left:0;
+    }
+
    #bloc_hebergements_populaires{
         display: flex;
         justify-content: left;
@@ -547,7 +567,7 @@ footer ul{
         order: 2;
         border-radius: 15px;
         margin: 0 0 50px 0;
-        padding: 30px 20px 30px 30px;
+        padding: 30px;
         width: 40%;
     }
 
@@ -612,7 +632,7 @@ footer ul{
 
     h3.titre_parc{
         padding:10px 0;
-        margin: 0;     
+        margin-left: 0;     
     }
 
     h3.titre_dame{
@@ -652,12 +672,19 @@ footer ul{
         height: 110px;
     }
 
-    .carte_activité{
+    .carte_activites{
         margin: 0px 0 40px 0px;
     }
 
     #activites{
         margin: 0 0 30px 0;
+    }
+
+    @media (min-width: 1105px){
+
+    h3.titre_parc, h3.titre_dame{
+        margin-left:5px;
+        padding-left:10px;
     }
 
 
@@ -676,15 +703,11 @@ footer ul{
 
 /* Grandes résolutions */
 
-@media screen and (min-width:1600px) 
-
-{
+@media screen and (min-width:1600px) {
 
     body{
         max-width: 1600px;
         margin: auto;
     } 
-
-
-
+   
 }
