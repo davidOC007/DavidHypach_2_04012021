@@ -411,7 +411,9 @@ footer ul{
 
 }
 
-@media (min-width:650px){
+@media screen and (min-width:650px)
+
+{
 
     header {
         display: flex;
@@ -463,8 +465,9 @@ footer ul{
    
 }
 
-@media (min-width:768px){
-    
+@media screen and (min-width:768px)
+
+{
     
     
     /* SECTION POPULAIRES */
@@ -502,14 +505,14 @@ footer ul{
     .legende_hebergements{
         height: 80px;
     }
-
        
 }
 
 /* Affichage filtres en ligne */
 
-@media screen and (min-width:925px){
+@media screen and (min-width:925px)
 
+{
 
 
 /*Filtres*/
@@ -530,11 +533,12 @@ footer ul{
     .option_filtres{
         margin-right: 20px;
     }
-
-    
+   
 }
 
-@media (min-width: 1024px){
+@media screen and (min-width: 1024px)
+
+{
 
     .logo{
         margin-left:30px;
@@ -559,9 +563,9 @@ footer ul{
    #bloc_hebergements_populaires{
         display: flex;
         justify-content: left;
-        }
+    }
 
-    /* SECTION POPULAIRES */
+/* SECTION POPULAIRES */
 
     #populaires{
         order: 2;
@@ -571,7 +575,7 @@ footer ul{
         width: 40%;
     }
 
-   .carte_populaires,.carte_hebergements{
+    .carte_populaires,.carte_hebergements{
         font-size: 15px;
     }
 
@@ -601,7 +605,7 @@ footer ul{
     }
 
     .carte_hebergements{
-        max-width: 30%;
+    max-width: 30%;
     }
 
     .legende_hebergements p{
@@ -612,7 +616,11 @@ footer ul{
         margin: 50px 0 10px 0;
     }
 
-/* SECTION ACTIVITES */
+    /* SECTION ACTIVITES */
+
+    #activites{
+        margin:0 0 30px 0;
+    }
 
     #activites h2{
         margin-bottom: 30px;
@@ -623,7 +631,7 @@ footer ul{
         flex-direction: column;
         width: 100%;
         max-width: 23%;
-        }
+    }
 
     #bloc_activites{
         display: flex;
@@ -676,38 +684,33 @@ footer ul{
         margin: 0px 0 40px 0px;
     }
 
-    #activites{
-        margin: 0 0 30px 0;
-    }
-
-    @media (min-width: 1105px){
-
-    h3.titre_parc, h3.titre_dame{
-        margin-left:5px;
-        padding-left:10px;
-    }
-
-
-
     /* FOOTER */
 
     footer{ 	
         padding: 20px 40px 20px 30px;
-    } 
+    }
+    
     .assistance{
         margin-right: 250px;
     }
 
 }
-   
 
-/* Grandes résolutions */
 
-@media screen and (min-width:1600px) {
+    @media screen and (min-width:1600px){
 
     body{
-        max-width: 1600px;
-        margin: auto;
-    } 
-   
+     max-width: 1600px;
+     margin: auto;
+    }
+
 }
+
+
+
+    
+
+
+
+    
+
